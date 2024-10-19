@@ -1,13 +1,22 @@
+:root {
+  --main-bg-color: burlywood;
+  --main-text-color: black;
+  --accent-color: brown;
+  --font-family: 'Impact', serif;
+}
+
 body {
   background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
   font-family: sans-serif;
   padding: 20px;
 }
 
-h1 {
+h1, h2 {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  font-family: var(--font-family);
+  text-align: center;
 }
 
 h2 {
@@ -24,7 +33,7 @@ h1, h2, p {
 
 .menu {
   width: 80%;
-  background-color: burlywood;
+  background-color: var(--main-bg-color);
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -40,16 +49,12 @@ img {
 
 hr {
   height: 2px;
-  background-color: brown;
-  border-color: brown;
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .bottom-line {
   margin-top: 25px;
-}
-
-h1, h2 {
-  font-family: Impact, serif;
 }
 
 .item p {
@@ -80,17 +85,32 @@ footer {
 }
 
 a {
-  color: black;
+  color: var(--main-text-color);
 }
 
 a:visited {
-  color: black;
+  color: var(--main-text-color);
 }
 
 a:hover {
-  color: brown;
+  color: var(--accent-color);
 }
 
 a:active {
-  color: brown;
+  color: var(--accent-color);
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .menu {
+    width: 100%;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
 }
